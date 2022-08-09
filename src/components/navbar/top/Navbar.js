@@ -17,10 +17,11 @@ const Logo = styled.h1`
   margin-top: 0.75em;
 `
 const List = styled.ul`
+  letter-spacing: 0.08em;
   height: 2.7em;
   display: flex;
   list-style: none;
-  font-size: 1.07em;
+  font-size: 0.95em;
   margin-block-start: 1em;
   margin-block-end: 1em;
   padding-inline-start: 40px;
