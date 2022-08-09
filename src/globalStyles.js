@@ -18,7 +18,33 @@ const GlobalStyle = createGlobalStyle`
   *, :before, :after {
     box-sizing: inherit;
   }
-  
+  .slick-slider {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .arrow {
+      cursor: pointer;
+      opacity: 60%;
+      transition: all 0.21s cubic-bezier(0.645,0.045,0.355,1);
+  }
+  .arrow:hover{
+    opacity:100%;
+  }
+  .left {
+    margin-right: 1em;
+  }
+  .right {
+    margin-left: 1em;
+  }
+  .skillIcon {
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 0.5em;
+  }
 `;
  
 export default GlobalStyle;

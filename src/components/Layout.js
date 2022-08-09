@@ -20,7 +20,7 @@ const Layout = () => {
     <>
         <Navbar />
         <NavbarBot />
-        <Home />
+        {/* <Home /> */}
         <About />
         <Work />
         <Contact />
