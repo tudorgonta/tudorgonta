@@ -1,9 +1,14 @@
+import styled from "styled-components";
+import Layout from "./components/Layout";
 
+const Text = styled.h1`
+  font-size: 48px;
+`
 function App() {
   return (
-    <div className="App">
-      Hello
-    </div>
+    <>
+      <Layout />
+    </>
   );
 }
 
