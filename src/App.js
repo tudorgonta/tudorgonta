@@ -1,12 +1,10 @@
-import styled from "styled-components";
 import Layout from "./components/Layout";
+import GlobalStyle from "./globalStyles";
 
-const Text = styled.h1`
-  font-size: 48px;
-`
 function App() {
   return (
     <>
+      <GlobalStyle />
       <Layout />
     </>
   );
