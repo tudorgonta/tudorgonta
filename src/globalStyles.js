@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100%;
     -webkit-font-smoothing: antialiased;
     line-height: 1.3;
+    overflow: hidden;
   }
   *, :before, :after {
     box-sizing: inherit;
