@@ -3,13 +3,14 @@ import LogoTG from "../../../svg/LogoTG"
 import * as palette from '../../../styleVariables';
 
 const Nav = styled.nav`
+  position: fixed;
   font-family: 'Roboto', sans-serif;
   position: fixed; 
   width: 100%;
   display: flex;
+  top: 2em;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1.5em;
   z-index:10;
 `
 const Logo = styled.a`

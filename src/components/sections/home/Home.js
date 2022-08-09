@@ -1,16 +1,14 @@
 import styled from "styled-components"
 import * as palette from '../../../styleVariables';
 
-const Hero = styled.div`
+const Hero = styled.section`
   font-family: Ayuthaya;
-  position: relative;
   width: 50%;
-  height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: left;
-  margin: 0 auto;
+  margin: 13em auto;
   z-index: 2;
   letter-spacing: 0.02em;
 `
@@ -52,7 +50,7 @@ const Button = styled.a`
 const Home = () => {
   return (
     <>
-    <Hero id="home">
+    <Hero>
       <Head>
         <First>Tudor</First>
         <Last>Gonta</Last>

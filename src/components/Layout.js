@@ -9,19 +9,31 @@ import BgLogo from '../svg/BgLogo'
 import styled from "styled-components"
 
 const BgContainer =styled.div`
-  position: absolute;
+  position: fixed;
   right: -33em;
   bottom: 0;
-  z-index: 1;
+  z-index: -1;
+`
+const Div = styled.div`
+  opacity: 0;
+`
+const DivAbout = styled.div`
+  opacity: 0;
+`
+const DivWork = styled.div`
+  opacity: 0;
 `
 
 const Layout = () => {
   return (
     <>
+        <Div id="home">.</Div>
         <Navbar />
         <NavbarBot />
-        {/* <Home /> */}
+        <Home />
+        <DivAbout id="about">.</DivAbout>
         <About />
+        <DivWork id="work">.</DivWork>
         <Work />
         <Contact />
         <BgContainer>

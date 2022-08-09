@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100%;
     -webkit-font-smoothing: antialiased;
     line-height: 1.3;
-    overflow: hidden;
+    overflow-x: hidden;
     background-color: #0c2f34;
   }
   *, :before, :after {
@@ -27,9 +27,16 @@ const GlobalStyle = createGlobalStyle`
     text-align: center;
   }
   .arrow {
-      cursor: pointer;
-      opacity: 60%;
-      transition: all 0.21s cubic-bezier(0.645,0.045,0.355,1);
+    cursor: pointer;
+    opacity: 60%;
+    transition: all 0.21s cubic-bezier(0.645,0.045,0.355,1);
+  }
+  .social {
+    cursor: pointer;
+    transition: all 0.21s cubic-bezier(0.645,0.045,0.355,1);
+  }
+  .social:hover {
+    opacity: 60%;
   }
   .arrow:hover{
     opacity:100%;

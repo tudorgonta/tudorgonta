@@ -13,16 +13,14 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Section = styled.section`
   font-family: Ayuthaya;
-  position: relative;
-  height: 100vh;
   width: 68%;
-  margin: 0 auto;
+  margin: 13em auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: left;
-  z-index: 2;
   letter-spacing: 0.02em;
+  z-index: 3;
 `
 const SectionAbout = styled.section`
   width: 81%;
@@ -70,7 +68,7 @@ const SliderWrapper = styled.div`
 `
 
 function SampleNextArrow(props) {
-  const { style, onClick } = props;
+  const { onClick } = props;
   return (
     <div className="button"> 
       <BsChevronRight fill={palette.GOLD_COLOR} size={55} onClick={onClick} className="arrow right"  />
@@ -101,7 +99,7 @@ const About = () => {
     prevArrow: <SamplePrevArrow />
   };
   return (
-    <Section id="#about">
+    <Section>
       <SectionAbout>
         <Wrapper>
           <Header>About me</Header>
@@ -118,7 +116,7 @@ const About = () => {
       </SectionAbout>
       <SliderWrapper>
         <Slider {...settings}>
-          <IconWrapper style="display:flex">
+          <IconWrapper style={{display: "flex"}}>
               <AiFillHtml5 fill={palette.GOLD_COLOR} size={size} className="skillIcon" />
               <span>HTML</span>
           </IconWrapper>
