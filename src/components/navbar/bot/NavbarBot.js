@@ -6,7 +6,6 @@ const DIV_MAIN = `
   position: fixed;
   bottom: 3.5em;
   z-index: 10;
-  background: transparent;
 `
 const STROKE = `
   content: "";
@@ -21,11 +20,13 @@ const Left = styled.div`
   ${DIV_MAIN}
   left: 0;
   bottom: 3.5em;
-  background: transparent;
 `
 const LeftItem = styled.a`
   margin-left: 1em;
-  background: transparent;
+  transition: all 0.21s cubic-bezier(0.645,0.045,0.355,1);
+  &:hover {
+    opacity: 60%;
+  }
 `
 const Right = styled.div`
   font-family: 'Roboto', sans-serif;
@@ -33,17 +34,19 @@ const Right = styled.div`
   ${DIV_MAIN}
   right: 0;
   bottom: 4.2em;
-  background: transparent;
 `
 const Wrapper = styled.div`
   display: flex;
-  background: transparent;
 `
 const Text = styled.a`
   text-decoration: none;
   letter-spacing: 0.1em;
   margin-right: 1em;
-  background: transparent;
+  transition: all 0.21s cubic-bezier(0.645,0.045,0.355,1);
+  &:hover {
+    font-weight: bold;
+  }
+  ${palette.TRANSITION_FIX()}
 `
 const Line = styled.span`
   ${STROKE}
@@ -61,7 +64,7 @@ const NavbarBot = () => {
       </Left>
       <Right>
         <Wrapper>
-          <Text href="#contact">gontatudor@gmail.com</Text>
+          <Text title="gontatudor@gmail.com" href="#contact">gontatudor@gmail.com</Text>
           <Line />
         </Wrapper>
       </Right>

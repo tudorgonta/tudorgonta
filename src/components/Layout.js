@@ -12,20 +12,21 @@ const BgContainer =styled.div`
   position: absolute;
   right: -33em;
   bottom: 0;
+  z-index: 1;
 `
 
 const Layout = () => {
   return (
     <>
         <Navbar />
-        <BgContainer>
-          <BgLogo />
-        </BgContainer>
         <NavbarBot />
         <Home />
         <About />
         <Work />
         <Contact />
+        <BgContainer>
+          <BgLogo />
+        </BgContainer>
     </>
   )
 }

@@ -11,9 +11,9 @@ const Nav = styled.nav`
   align-items: center;
   margin-top: 1.5em;
   z-index:10;
-  background: transparent;
 `
-const Logo = styled.h1`
+const Logo = styled.a`
+  cursor: pointer;
   font-size: 16px;
   margin-left: 3.2em;
   margin-top: 0.75em;
@@ -29,12 +29,10 @@ const List = styled.ul`
   padding-inline-start: 40px;
   margin-right: 3.2em;
   margin-top: 1.5em;
-  background: transparent;
 `
 const Item = styled.li`
   margin-right: 3.5em;
   margin-top: 0.61em;
-  background: transparent;
 `
 const Button = styled.a`
   border: 1.4px solid ${palette.GOLD_COLOR};
@@ -44,7 +42,6 @@ const Button = styled.a`
   line-height: 1;
   text-decoration: none;
   transition: all 0.21s cubic-bezier(0.645,0.045,0.355,1);
-  background: transparent;
 
   &:hover {
     background-color: ${palette.CONTAINER_COLOR};
@@ -56,7 +53,6 @@ const Button = styled.a`
 const Link = styled.a`
   transition: all 0.21s cubic-bezier(0.645,0.045,0.355,1);
   text-decoration: none;
-  background: transparent;
   &:hover {
     font-weight: bold;
   }
@@ -65,7 +61,7 @@ const Link = styled.a`
 const Navbar = () => {
   return (
     <Nav>
-      <Logo>
+      <Logo href="#home">
         <LogoTG width={65}/>
       </Logo>
       <List>
