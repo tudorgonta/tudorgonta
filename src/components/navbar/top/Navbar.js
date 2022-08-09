@@ -1,45 +1,51 @@
 import styled from "styled-components"
 import LogoTG from "../../../svg/LogoTG"
+import * as palette from '../../../styleVariables';
 
 const Nav = styled.nav`
-  position: relative; 
   font-family: 'Roboto', sans-serif;
+  position: relative; 
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  margin-top: 2em;
+  margin-top: 1.5em;
 `
 const Logo = styled.h1`
   font-size: 16px;
-  margin-left: 4.2em;
+  margin-left: 3.2em;
   margin-top: 0.75em;
 `
 const List = styled.ul`
   height: 2.7em;
   display: flex;
   list-style: none;
-  font-size: 1.01em;
-  margin-right: 4.2em;
-  margin-top: 1.7em;
+  font-size: 1.07em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  padding-inline-start: 40px;
+  margin-right: 3.2em;
+  margin-top: 1.5em;
 `
 const Item = styled.li`
   margin-right: 3.5em;
   margin-top: 0.61em;
 `
 const Button = styled.a`
-  border: 1.4px solid #F9E5C9;
+  border: 1.4px solid ${palette.GOLD_COLOR};
   border-radius: 0.2em;
   padding: 0.65em 1.5em;
   cursor: pointer;
-  line-height: 1.15;
+  line-height: 1;
   text-decoration: none;
   transition: all 0.21s cubic-bezier(0.645,0.045,0.355,1);
 
   &:hover {
-    background-color: #103A40;
+    background-color: ${palette.CONTAINER_COLOR};
     outline: none;
+    font-weight: bold;
   }
+  ${palette.TRANSITION_FIX()}
 `
 const Link = styled.a`
   transition: all 0.21s cubic-bezier(0.645,0.045,0.355,1);
@@ -48,15 +54,7 @@ const Link = styled.a`
   &:hover {
     font-weight: bold;
   }
-  &:before{
-    display: block;
-    content: attr(title);
-    font-weight: bold;
-    height: 1px;
-    color: transparent;
-    overflow: hidden;
-    visibility: hidden;
-  }
+  ${palette.TRANSITION_FIX()}
 `
 const Navbar = () => {
   return (
@@ -68,7 +66,7 @@ const Navbar = () => {
         <Item><Link href="#about" title="About">About</Link></Item>
         <Item><Link href="#work" title="Work">Work</Link></Item>
         <Item><Link href="#contact" title="Contact">Contact</Link></Item>
-        <Button>Resume</Button>
+        <Button title="Resume">Resume</Button>
       </List>
     </Nav>
   )

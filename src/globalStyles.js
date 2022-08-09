@@ -16,15 +16,6 @@ const GlobalStyle = createGlobalStyle`
   *, :before, :after {
     box-sizing: inherit;
   }
-  ul {
-    display: block;
-    list-style-type: none;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-  }
 `;
  
 export default GlobalStyle;
