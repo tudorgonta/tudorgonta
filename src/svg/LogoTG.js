@@ -36,8 +36,8 @@ const LogoTG = (props) => (
             style={{
               stroke: "#b4b4b4",
               fill: "none",
-              strokeMiterlimit: 10,
-              strokeWidth: 10,
+              strokeMiterlimit: 7,
+              strokeWidth: 7,
             }}
             d="M188.25 42.9 365.5 220.15"
           />
@@ -45,8 +45,8 @@ const LogoTG = (props) => (
           <path
             style={{
               fill: "none",
-              strokeMiterlimit: 10,
-              strokeWidth: 10,
+              strokeMiterlimit: 7,
+              strokeWidth: 7,
               stroke: "#f9e5c9",
             }}
             d="M188.25 42.9 365.5 220.15"
@@ -67,6 +67,7 @@ const LogoTG = (props) => (
           fontSize: "113.55px",
           fontFamily: "Ayuthaya",
           fill: "#f9e5c9",
+          fontWeight: "70",
         }}
         id="Layer_2-2"
         data-name="Layer 2"

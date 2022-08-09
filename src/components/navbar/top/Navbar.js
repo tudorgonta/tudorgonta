@@ -19,7 +19,7 @@ const List = styled.ul`
   height: 2.7em;
   display: flex;
   list-style: none;
-  font-size: 1.15em;
+  font-size: 1.01em;
   margin-right: 4.2em;
   margin-top: 1.7em;
 `
@@ -62,7 +62,7 @@ const Navbar = () => {
   return (
     <Nav>
       <Logo>
-        <LogoTG width={75}/>
+        <LogoTG width={65}/>
       </Logo>
       <List>
         <Item><Link href="#about" title="About">About</Link></Item>
