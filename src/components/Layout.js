@@ -23,7 +23,9 @@ const DivAbout = styled.div`
 const DivWork = styled.div`
   opacity: 0;
 `
-
+const DivContact = styled.div`
+  opacity: 0;
+`
 const Layout = () => {
   return (
     <>
@@ -35,6 +37,7 @@ const Layout = () => {
         <About />
         <DivWork id="work">.</DivWork>
         <Work />
+        <DivContact id="contact">.</DivContact>
         <Contact />
         <BgContainer>
           <BgLogo />

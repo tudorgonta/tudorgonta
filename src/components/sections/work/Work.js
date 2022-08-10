@@ -7,7 +7,7 @@ import EV from '../../../assets/ev.png'
 const Section = styled.section`
   font-family: Ayuthaya;
   width: 68%;
-  margin:  auto;
+  margin: 13em auto;
   display: flex;
   justify-content: center;
   flex-direction: column;

@@ -57,7 +57,7 @@ const Home = () => {
       </Head>
       <SubHead>Welcome to my corner of the internet.</SubHead>
       <Desc>I`m a full stack developer with a passion for building outstanding digital experiences. I design, build and improve web applications.</Desc>
-      <Button href="#contact">Check out my work!</Button>
+      <Button href="#work">Check out my work!</Button>
     </Hero>
     </>
   )
