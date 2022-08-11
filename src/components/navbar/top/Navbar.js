@@ -61,7 +61,7 @@ const Link = styled.a`
 `
 const Navbar = () => {
   return (
-    <Nav>
+    <Nav >
       <Logo href="#home">
         <LogoTG width={65}/>
       </Logo>

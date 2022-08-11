@@ -18,6 +18,15 @@ const GlobalStyle = createGlobalStyle`
   *, :before, :after {
     box-sizing: inherit;
   }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+  }
+  input:-webkit-autofill{
+    -webkit-text-fill-color: #F9E5C9 !important;
+  }
   .slick-slider {
     display: flex;
     width: 100%;
