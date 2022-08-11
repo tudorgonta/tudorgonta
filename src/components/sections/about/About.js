@@ -107,7 +107,7 @@ const About = () => {
         </Wrapper>
         <Desc>
           I`m a full stack developer with a passion for building outstanding digital experiences. I design, build and improve web applications.
-          I`m currently pursuing a Computer Science degree at Birkbeck (University of London), with evening attendence. Expected graduation in 2023.
+          I`m currently pursuing a Bsc Degree in Computer Science at Birkbeck (University of London), with evening attendence. Expected graduation in 2023.
         </Desc>
         <Wrapper>
           <Header>Skills</Header>
