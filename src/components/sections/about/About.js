@@ -144,6 +144,10 @@ const About = () => {
               <span>React</span>
           </IconWrapper>
           <IconWrapper>
+              <NextJs fill={palette.GOLD_COLOR} size={size+10}/>
+              <span>Next Js</span>
+          </IconWrapper>
+          <IconWrapper>
               <DiJava fill={palette.GOLD_COLOR} size={size} className="skillIcon" />
               <span>Java</span>
           </IconWrapper>
@@ -166,10 +170,6 @@ const About = () => {
           <IconWrapper>
               <DiMongodb fill={palette.GOLD_COLOR} size={size} className="skillIcon" />
               <span>MongoDB</span>
-          </IconWrapper>
-          <IconWrapper>
-              <NextJs fill={palette.GOLD_COLOR} size={size+10}/>
-              <span>Next Js</span>
           </IconWrapper>
           <IconWrapper>
               <AiFillGithub fill={palette.GOLD_COLOR} size={size} className="skillIcon" />

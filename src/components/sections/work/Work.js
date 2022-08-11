@@ -3,6 +3,7 @@ import * as palette from '../../../styleVariables';
 import {AiFillGithub} from 'react-icons/ai'
 import {BiLinkExternal} from 'react-icons/bi'
 import EV from '../../../assets/ev.png'
+import PR from '../../../assets/pr.png'
 
 const Section = styled.section`
   font-family: Ayuthaya;
@@ -24,7 +25,7 @@ const SectionWork = styled.section`
 `
 const Header = styled.section`
   font-size: 1.6em;
-  margin-bottom: 4%;
+  margin-bottom: 8%;
 `
 const Line = styled.span`
   opacity: 80%;
@@ -42,10 +43,17 @@ const Wrapper = styled.div`
 `
 const BodyWrapper = styled.div`
   display: flex;
+  margin-bottom: 15%;
 `
-const Left = styled.div`
+const Left= styled.div`
   flex: 1;
   margin-right: -4.5em;
+  z-index:1
+`
+const Left2 = styled.div`
+  flex: 1;
+  margin-left: -4.5em;
+  text-align:right;
   z-index:1
 `
 const H3 = styled.h3`
@@ -77,7 +85,6 @@ const Social = styled.div`
   displat: flex;
 `
 const Image = styled.div`
-  background-image: url(${EV});
   height: 100%; 
   width: 100%; 
   background-size: cover;
@@ -107,7 +114,7 @@ const Work = () => {
             <Title>EV Charging</Title>
             <Desc>A full stack web app built with Next Js, MongoDB, Tailwind CSS, NextAuth. Make enquiries and manage them in the admin panel. 
                   Create users and assign roles. A minimal and responsive 
-                  front-end design. 
+                  front-end design. Deployed on Vercel.
             </Desc>
             <Social>
               <AiFillGithub fill={palette.GOLD_COLOR} size={28} style={{marginRight: "1em"}} className="social"/>
@@ -116,9 +123,26 @@ const Work = () => {
           </Left>
           <Right>
             <ImgContainer>
-              <Image />
+              <Image style={{ backgroundImage: `url(${EV})` }} />
             </ImgContainer>
           </Right>
+        </BodyWrapper>
+        <BodyWrapper>
+          <Right>
+            <ImgContainer>
+              <Image style={{ backgroundImage: `url(${PR})` }}  />
+            </ImgContainer>
+          </Right>
+          <Left2>
+            <H3>Featured Project</H3>
+            <Title>PublicRepublic</Title>
+            <Desc>A web app for a photo	&amp; video company. Built with Next Js, Tailwind CSS and Sanity.io as a CMS. Custom Sanity dashboard with editable components. Deployed on Vercel.
+            </Desc>
+            <Social>
+              <AiFillGithub fill={palette.GOLD_COLOR} size={28} style={{marginRight: "1em"}} className="social"/>
+              <BiLinkExternal fill={palette.GOLD_COLOR} size={28} className="social"/>
+            </Social>
+          </Left2>
         </BodyWrapper>
       </SectionWork>
     </Section>
