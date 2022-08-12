@@ -1,11 +1,12 @@
 import styled from "styled-components"
 import * as palette from '../../../styleVariables';
 import {AiFillGithub, AiFillLinkedin} from 'react-icons/ai'
+import Fade from 'react-reveal/Fade';
 
 const DIV_MAIN = `
   position: fixed;
   bottom: 3.5em;
-  z-index: 10;
+  z-index: 13;
 `
 const STROKE = `
   content: "";
@@ -56,17 +57,21 @@ const NavbarBot = () => {
   return (
     <>
       <Left>
-        <Wrapper>
-          <Line />
-          <LeftItem target="_blank" href="#"><AiFillGithub fill={palette.GOLD_COLOR} size={SOCIAL_ICON_SIZE} /></LeftItem>
-          <LeftItem target="_blank" href="#"><AiFillLinkedin fill={palette.GOLD_COLOR} size={SOCIAL_ICON_SIZE} /></LeftItem>
-        </Wrapper>
+        <Fade left duration={palette.DURATION} delay={palette.DELAY+1000} >
+          <Wrapper>
+            <Line />
+            <LeftItem target="_blank" href="#"><AiFillGithub fill={palette.GOLD_COLOR} size={SOCIAL_ICON_SIZE} /></LeftItem>
+            <LeftItem target="_blank" href="#"><AiFillLinkedin fill={palette.GOLD_COLOR} size={SOCIAL_ICON_SIZE} /></LeftItem>
+          </Wrapper>
+        </Fade>
       </Left>
       <Right>
-        <Wrapper>
-          <Text title="gontatudor@gmail.com" href="#contact">gontatudor@gmail.com</Text>
-          <Line />
-        </Wrapper>
+        <Fade right duration={palette.DURATION} delay={palette.DELAY+1000} >
+          <Wrapper>
+            <Text title="gontatudor@gmail.com" href="#contact">gontatudor@gmail.com</Text>
+            <Line />
+          </Wrapper>
+        </Fade>
       </Right>
     </>
   )

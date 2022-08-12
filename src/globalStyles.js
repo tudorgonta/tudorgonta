@@ -7,25 +7,23 @@ const GlobalStyle = createGlobalStyle`
     background: transparent;
     color: #F9E5C9;
   }
-  ::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.05);
-	border-radius: 10px;
-	background-color: #092326;
-}
-
-::-webkit-scrollbar
-{
-	width: 8px;
-	background-color: #092326;
-}
-
-::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.1);
-	background-color: #061a1c;
-}
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    background-color: #092326;
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+    background-color: #092326;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.1);
+    background-color: #061a1c;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     width: 100%;
     min-height: 100%;

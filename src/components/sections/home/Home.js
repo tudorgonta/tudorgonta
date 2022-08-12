@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import * as palette from '../../../styleVariables';
+import Fade from 'react-reveal/Fade';
 
 const Hero = styled.section`
   font-family: Ayuthaya;
@@ -9,8 +10,10 @@ const Hero = styled.section`
   flex-direction: column;
   align-items: left;
   margin: 13em auto;
-  z-index: 2;
   letter-spacing: 0.02em;
+  @media ${palette.device.tablet} { 
+    width: 65%;
+  }
 `
 const Head = styled.div`
  font-size: 4.65em;
@@ -29,9 +32,13 @@ const SubHead = styled.div`
 const Desc = styled.p`
   width: 80%;
   opacity: 80%;
+  margin-bottom: 10%;
+  @media ${palette.device.tablet} { 
+    width: 100%;
+    margin-bottom: 15%
+  }
 `
 const Button = styled.a`
-  margin-top: 5%;
   width: 24%;
   font-size: 1em;
   border: 1.4px solid ${palette.GOLD_COLOR};
@@ -52,12 +59,20 @@ const Home = () => {
     <>
     <Hero>
       <Head>
-        <First>Tudor</First>
-        <Last>Gonta</Last>
+        <Fade left duration={palette.DURATION} delay={palette.DELAY}>
+          <First>Tudor</First>
+        </Fade>
+        <Fade right duration={palette.DURATION} delay={palette.DELAY}>
+          <Last>Gonta</Last>
+        </Fade>
       </Head>
+      <Fade bottom duration={palette.DURATION} delay={palette.DELAY}>
       <SubHead>Welcome to my corner of the internet.</SubHead>
       <Desc>I`m a full stack developer with a passion for building outstanding digital experiences. I design, build and improve web applications.</Desc>
-      <Button href="#work">Check out my work!</Button>
+      </Fade>
+      <Fade top duration={palette.DURATION} delay={palette.DELAY}>
+        <Button href="#work">Check out my work!</Button>
+      </Fade>
     </Hero>
     </>
   )

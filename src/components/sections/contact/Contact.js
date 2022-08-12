@@ -2,6 +2,7 @@ import styled, {keyframes} from "styled-components"
 import * as palette from '../../../styleVariables';
 import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
+import Fade from 'react-reveal/Fade';
 
 const Section = styled.section`
   font-family: Ayuthaya;
@@ -197,37 +198,39 @@ const Contact = () => {
   return (
     <>
     {open && (
-    <Success>
+    <Success className="headline">
       <H3>Thank you!</H3>
       <Text>I`ve recieved your message and will get back to you as soon as possible.</Text>
       <Submit style={{width: "80%"}} onClick={(e) => handleShow()} > OK, CLOSE</Submit>
     </Success>
     )}
     <Section>
-      <H2>What`s Next?</H2>
-      <H1>Get In Touch</H1>
-      <Line />
-      <Desc>I`m currently looking for any new opportunities, my inbox is
-            always open. Whether you have a question or just want to say hi,
-            I`ll try my best to get back to you!
-      </Desc>
-      <Form ref={form} onSubmit={sendEmail}>
-        <Wrapper>
-          <Fieldset>
-            <Legend>Name</Legend>
-            <InputName spellcheck="false" type="text" name="name" required />
-          </Fieldset>
-          <Fieldset>
-            <Legend>E-mail</Legend>
-            <InputEmail spellcheck="false" type="email" name="email" required />
-          </Fieldset>
-        </Wrapper>
-        <Fieldset2>
-            <Legend spellcheck="false">Comments</Legend>
-          <InputComm name="message" />
-        </Fieldset2>
-        <Submit type="submit" title="Say Hello!">Say Hello!</Submit>
-      </Form>
+      <Fade bottom duration={palette.DURATION} delay={palette.SCROLL_DELAY}> 
+        <H2>What`s Next?</H2>
+        <H1>Get In Touch</H1>
+        <Line />
+        <Desc>I`m currently looking for any new opportunities, my inbox is
+              always open. Whether you have a question or just want to say hi,
+              I`ll try my best to get back to you!
+        </Desc>
+        <Form ref={form} onSubmit={sendEmail}>
+          <Wrapper>
+            <Fieldset>
+              <Legend>Name</Legend>
+              <InputName spellcheck="false" type="text" name="name" required />
+            </Fieldset>
+            <Fieldset>
+              <Legend>E-mail</Legend>
+              <InputEmail spellcheck="false" type="email" name="email" required />
+            </Fieldset>
+          </Wrapper>
+          <Fieldset2>
+              <Legend spellcheck="false">Comments</Legend>
+            <InputComm name="message" />
+          </Fieldset2>
+          <Submit type="submit" title="Say Hello!">Say Hello!</Submit>
+        </Form>
+      </Fade>
     </Section>
     </>
   )

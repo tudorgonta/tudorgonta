@@ -19,7 +19,7 @@ const BgLogo = (props) => (
       data-name="logo BG"
       transform="translate(5.605 5.606)"
       style={{
-        opacity: 0.15,
+        opacity: 0.05,
       }}
     >
       <g id="Layer_1" data-name="Layer 1" transform="translate(5 5)">
