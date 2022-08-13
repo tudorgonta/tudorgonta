@@ -13,7 +13,7 @@ export default function Hamburger({ isOpen }){
                 .hamburger{
                     visibility: ${!isOpen && 'visible'};
                     transition: all 2s ease-in-out;
-                    margin: 3.25em 2em;
+                    margin: 3.25em 3.5em;
                     float: right;
                     text-align:right;
                     height: 2rem;

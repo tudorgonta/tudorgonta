@@ -93,7 +93,7 @@ const Navbar = () => {
       margin-top: 30%;
       text-align: center;
       font-size: 1.5em;
-      width: 115%;
+      width: 96%;
       z-index: 14;
     }
   `
