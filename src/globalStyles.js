@@ -1,15 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-import Ayuthaya1 from './fonts/Ayuthaya.ttf'
-
 const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: 'Ayuthaya1';
-    src: local('Ayuthaya1'), local('FontName'),
-    url(${Ayuthaya1}) format('ttf'),
-    font-weight: 300;
-    font-style: normal;
-  }
   * {
     margin: 0;
     padding: 0;

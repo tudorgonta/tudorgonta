@@ -5,6 +5,7 @@ import { useRef, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 
 const Section = styled.section`
+overflow-x:hidden;
   font-family: Ayuthaya;
   width: 68%;
   margin: 13em auto;
@@ -16,11 +17,26 @@ const Section = styled.section`
   letter-spacing: 0.02em;
   text-align: center;
   margin-top: 10em;
+  &::-webkit-scrollbar-track {
+    display: none;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
+  @media ${palette.device.tablet} { 
+    width: 80%;
+  }
 `
 const H2 = styled.h2`
   font-weight: normal;
   font-size: 1.75em;
   opacity: 0.8;
+  @media ${palette.device.tablet} { 
+    font-size: 1.5em;
+  }
 `
 const H1 = styled.h1`
   font-weight: normal;
@@ -28,6 +44,9 @@ const H1 = styled.h1`
   margin: 0.3em 0;
   margin-top: 0.1em;
   opacity: 13;
+  @media ${palette.device.tablet} { 
+    font-size: 2.25em;
+  }
 `
 const Line = styled.div`
   opacity: 0.8;
@@ -39,6 +58,9 @@ const Line = styled.div`
   background-color: ${palette.GOLD_COLOR};
   margin-bottom: 2em;
   z-index: 2;
+  @media ${palette.device.tablet} { 
+    width: 100%;
+  }
 `
 const Desc = styled.p`
   opacity: 0.8; 
@@ -46,6 +68,9 @@ const Desc = styled.p`
   margin-bottom: 3em;
   width: 57%;
   font-size: 0.9em;
+  @media ${palette.device.tablet} { 
+    width: 100%;
+  }
 `
 const Form = styled.form`
   display: flex;
@@ -53,15 +78,24 @@ const Form = styled.form`
   width: 45%;
   align-items: center;
   margin: 0 auto;
+  @media ${palette.device.tablet} { 
+    width: 100%;
+    margin-left: 3.5%;
+  }
 `
 const InputName = styled.input`
+overflow-x:hidden;
   width: 80%;
   padding: 0.65em 1.5em;
   outline: none;
   border:none;
   font-size: 0.95em;
+  @media ${palette.device.tablet} { 
+    padding: 0.65em 0.8em;
+  }
 `
 const Fieldset = styled.fieldset`
+overflow-x:hidden;
   width: 100%;
   margin-right: 1em;
   border: 1.5px solid ${palette.GOLD_COLOR};
@@ -79,6 +113,7 @@ const Fieldset = styled.fieldset`
   }
 `
 const Fieldset2 = styled.fieldset`
+overflow-x:hidden;
   width: 96%;
   margin-right: 1em;
   border: 1.5px solid ${palette.GOLD_COLOR};
@@ -103,13 +138,18 @@ const Legend = styled.legend`
   font-size: 0.9em;
 `
 const InputEmail = styled.input`
+overflow-x:hidden;
   width: 80%;
   padding: 0.65em 1.5em;
   outline: none;
   border:none;
   font-size: 0.95em;
+  @media ${palette.device.tablet} { 
+    padding: 0.65em 0.8em;
+  }
 `
 const InputComm = styled.textarea`
+overflow-x:hidden;
   width: 87.5%;
   padding: 0.65em 1.5em;
   outline: none;
@@ -119,6 +159,9 @@ const InputComm = styled.textarea`
   resize: none;
   height: 4em;
   text-decoration: none;
+  @media ${palette.device.tablet} { 
+    padding: 0.65em 0.8em;
+  }
 `
 const Submit = styled.button`
   font-size: 1em;
@@ -137,6 +180,7 @@ const Submit = styled.button`
   ${palette.TRANSITION_FIX()}
 `
 const Wrapper = styled.div`
+overflow-x:hidden;
   display: flex;
   width: 100%;
   margin: 0 auto;
@@ -164,6 +208,13 @@ const Success = styled.div`
     box-shadow: 0 20px 30px -15px #071e21;
     color: rgb(249, 229, 201, 1);
     opacity: 100%;
+  }
+  @media ${palette.device.tablet} { 
+    margin-top: 95%;
+    width: 35%;
+    z-index: 30;
+    opacity: 100%;
+    padding: 3em;
   }
 
 `
@@ -198,7 +249,7 @@ const Contact = () => {
   return (
     <>
     {open && (
-    <Success className="headline">
+    <Success className="headline" style={{visibility: open ? "visible" : "hidden", display: open ? "block" : "none"}}>
       <H3>Thank you!</H3>
       <Text>I`ve recieved your message and will get back to you as soon as possible.</Text>
       <Submit style={{width: "80%"}} onClick={(e) => handleShow()} > OK, CLOSE</Submit>

@@ -5,6 +5,7 @@ const NextJs = (props) => (
     data-name="Layer 1"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 506.68 306.34"
+    style={{marginBottom: "0.7em"}}
     {...props}
   >
     <title>{"nextjs"}</title>

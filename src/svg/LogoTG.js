@@ -14,7 +14,7 @@ const LogoTG = (props) => {
 
    const boxStyle = {
     fontSize: "113.55px",
-    fontFamily: "Ayuthaya1",
+    fontFamily: "Ayuthaya",
     fill: "#f9e5c9",
     fontWeight: "70",
     opacity: isHover ? "90%" : "100%",

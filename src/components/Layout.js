@@ -31,7 +31,6 @@ const Layout = () => {
     <>
         <Div id="home">.</Div>
         <Navbar />
-        <NavbarBot />
         <Home />
         <DivAbout id="about">.</DivAbout>
         <About />
@@ -39,6 +38,7 @@ const Layout = () => {
         <Work />
         <DivContact id="contact">.</DivContact>
         <Contact />
+        <NavbarBot />
         <BgContainer>
           <BgLogo />
         </BgContainer>

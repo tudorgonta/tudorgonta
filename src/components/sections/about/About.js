@@ -49,11 +49,12 @@ const Wrapper = styled.div`
 `
 const IconWrapper = styled.div`
   display: flex; 
-  flex-direction: column;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   opacity: 60%;
   transition: all 0.21s cubic-bezier(0.645,0.045,0.355,1);
+  
   &:hover {
     opacity: 100%;
   }
@@ -109,6 +110,7 @@ const About = () => {
     z-index: 3;
     @media ${palette.device.tablet} { 
       width: 80%;
+      margin: 8em auto;
     }
   `
   
@@ -118,8 +120,8 @@ const About = () => {
     arrows: true,
     autoplay: false,
     speed: 850,
-    slidesToShow: isDesktop ? 6 : 3,
-    slidesToScroll: isDesktop ? 6 : 3,
+    slidesToShow: isDesktop ? 6 : 2,
+    slidesToScroll: isDesktop ? 6 : 2,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />
   };
@@ -144,77 +146,96 @@ const About = () => {
           <Slider {...settings}>
             <IconWrapper style={{display: "flex"}}>
                 <AiFillHtml5 fill={palette.GOLD_COLOR} size={size} className="skillIcon" />
+                <br></br>
                 <span>HTML</span>
             </IconWrapper>
             <IconWrapper>
                 <IoLogoCss3 fill={palette.GOLD_COLOR} size={size} className="skillIcon" />
+                <br></br>
                 <span>CSS</span>
             </IconWrapper>
             <IconWrapper>
                 <DiSass fill={palette.GOLD_COLOR} size={size} className="skillIcon" />
+                <br></br>
                 <span>SASS</span>
             </IconWrapper><IconWrapper>
                 <SiTailwindcss fill={palette.GOLD_COLOR} size={size} className="skillIcon" />
+                <br></br>
                 <span>Tailwind CSS</span>
             </IconWrapper>
             <IconWrapper>
                 <DiJavascript fill={palette.GOLD_COLOR} size={size} className="skillIcon" />
+                <br></br>
                 <span>JavaScript</span>
             </IconWrapper>
             <IconWrapper>
                 <SiStyledcomponents fill={palette.GOLD_COLOR} size={size} className="skillIcon" />
+                <br></br>
                 <span>Styled Comp.</span>
             </IconWrapper>
             <IconWrapper>
                 <DiReact fill={palette.GOLD_COLOR} size={size} className="skillIcon" />
+                <br></br>
                 <span>React</span>
             </IconWrapper>
             <IconWrapper>
                 <NextJs fill={palette.GOLD_COLOR} size={size+10}/>
+                <br></br>
                 <span>Next Js</span>
             </IconWrapper>
             <IconWrapper>
                 <DiJava fill={palette.GOLD_COLOR} size={size} className="skillIcon" />
+                <br></br>
                 <span>Java</span>
             </IconWrapper>
             <IconWrapper>
                 <DiPython fill={palette.GOLD_COLOR} size={size} className="skillIcon" />
+                <br></br>
                 <span>Python</span>
             </IconWrapper>
             <IconWrapper>
                 <SiPhp fill={palette.GOLD_COLOR} size={size} className="skillIcon" />
+                <br></br>
                 <span>PHP</span>
             </IconWrapper>
             <IconWrapper>
                 <DiNodejsSmall fill={palette.GOLD_COLOR} size={size} className="skillIcon" />
+                <br></br>
                 <span>Node Js</span>
             </IconWrapper>
             <IconWrapper>
                 <SiMysql fill={palette.GOLD_COLOR} size={size} className="skillIcon" />
+                <br></br>
                 <span>MySql</span>
             </IconWrapper>
             <IconWrapper>
                 <DiMongodb fill={palette.GOLD_COLOR} size={size} className="skillIcon" />
+                <br></br>
                 <span>MongoDB</span>
             </IconWrapper>
             <IconWrapper>
                 <AiFillGithub fill={palette.GOLD_COLOR} size={size} className="skillIcon" />
+                <br></br>
                 <span>Github</span>
             </IconWrapper>
             <IconWrapper>
                 <SiAdobexd fill={palette.GOLD_COLOR} size={size} className="skillIcon" />
+                <br></br>
                 <span>Adobe XD</span>
             </IconWrapper>
             <IconWrapper>
                 <SiAdobephotoshop fill={palette.GOLD_COLOR} size={size} className="skillIcon" />
+                <br></br>
                 <span>Photoshop</span>
             </IconWrapper>
             <IconWrapper>
                 <SiAdobeillustrator fill={palette.GOLD_COLOR} size={size} className="skillIcon" />
+                <br></br>
                 <span>Illustrator</span>
             </IconWrapper>
             <IconWrapper>
                 <FaFigma fill={palette.GOLD_COLOR} size={size} className="skillIcon" />
+                <br></br>
                 <span>Figma</span>
             </IconWrapper>
           </Slider>

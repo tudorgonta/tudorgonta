@@ -24,6 +24,7 @@ const Logo = styled.a`
   font-size: 16px;
   margin-left: 3.2em;
   margin-top: 0.75em;
+  text-decoration: none;
 `
 const Item = styled.li`
   margin-right: 3.5em;
@@ -93,7 +94,7 @@ const Navbar = () => {
       margin-top: 30%;
       text-align: center;
       font-size: 1.5em;
-      width: 96%;
+      width: 100%;
       z-index: 14;
     }
   `
@@ -101,7 +102,7 @@ const Navbar = () => {
     <>
       <Nav >
         <Fade top duration={palette.DURATION}>
-        <Logo href="http://localhost:3000">
+        <Logo href="/">
           <LogoTG width={65}/>
         </Logo>
         

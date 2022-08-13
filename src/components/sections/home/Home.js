@@ -13,6 +13,7 @@ const Hero = styled.section`
   letter-spacing: 0.02em;
   @media ${palette.device.tablet} { 
     width: 65%;
+    margin: 9em auto;
   }
 `
 const Head = styled.div`

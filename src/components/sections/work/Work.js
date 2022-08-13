@@ -5,8 +5,6 @@ import {BiLinkExternal} from 'react-icons/bi'
 import EV from '../../../assets/ev.png'
 import PR from '../../../assets/pr.png'
 import { Fade } from "react-reveal";
-import { useEffect } from "react";
-import { useState } from "react";
 const SectionWork = styled.section`
   width: 81%;
   margin: 0 auto;
@@ -19,16 +17,6 @@ const Header = styled.section`
   margin-bottom: 8%;
 `
 const Work = () => {
-  const [isDesktop, setDesktop] = useState(window.innerWidth > 765);
-
-  const updateMedia = () => {
-    setDesktop(window.innerWidth > 765);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", updateMedia);
-    return () => window.removeEventListener("resize", updateMedia);
-  });
   const Wrapper = styled.div`
     display: flex;
     margin-bottom: 1em;
@@ -44,6 +32,16 @@ const Work = () => {
     align-items: left;
     z-index: 2;
     letter-spacing: 0.02em;
+    overflow-x:hidden;
+    &::-webkit-scrollbar-track {
+      display: none;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &::-webkit-scrollbar-thumb {
+      display: none;
+    }
     @media ${palette.device.tablet} { 
       width: 100%;
     }
@@ -72,7 +70,7 @@ const Work = () => {
   `
   const Left= styled.div`
     flex: 1;
-    margin-right: -4.5em;
+    margin-right: -4.4em;
     z-index:1
   `
   const Left2 = styled.div`

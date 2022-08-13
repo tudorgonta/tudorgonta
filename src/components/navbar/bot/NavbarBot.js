@@ -2,8 +2,8 @@ import styled from "styled-components"
 import * as palette from '../../../styleVariables';
 import {AiFillGithub, AiFillLinkedin} from 'react-icons/ai'
 import Fade from 'react-reveal/Fade';
-import { useEffect } from "react";
 import { useState } from "react";
+import { useEffect } from "react";
 
 
 const STROKE = `
@@ -13,6 +13,9 @@ const STROKE = `
   height: 1.5px;
   margin-top: 0.7em;
   background-color: ${palette.GOLD_COLOR};
+  @media ${palette.device.tablet} { 
+    width: 0.5em;
+  }
 `
 const Wrapper = styled.div`
   display: flex;
@@ -31,19 +34,36 @@ const Line = styled.span`
   ${STROKE}
 `
 const SOCIAL_ICON_SIZE = 24
+
+
 const NavbarBot = () => {
+
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 765);
+
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 765);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
+
   const DIV_MAIN = `
     position: fixed;
     bottom: 3.5em;
     z-index: 13;
     @media ${palette.device.tablet} { 
-      display: none;
+      position: relative;
     }
   `
   const Left = styled.div`
     ${DIV_MAIN}
     left: 0;
     bottom: 3.5em;
+    @media ${palette.device.tablet} { 
+      overflow-x: hidden;
+    }
   `
   const LeftItem = styled.a`
     margin-left: 1em;
@@ -58,11 +78,22 @@ const NavbarBot = () => {
     ${DIV_MAIN}
     right: 0;
     bottom: 4.2em;
+    @media ${palette.device.tablet} { 
+      margin-top: 0.5em;
+      overflow-x: hidden;
+    }
+  `
+  const FlexContainer = styled.div`
+    @media ${palette.device.tablet} { 
+      display: flex;
+      justify-content: space-between;
+      margin-top: -25%;
+    }
   `
   return (
-    <>
+    <FlexContainer>
       <Left>
-        <Fade left duration={palette.DURATION} delay={palette.DELAY+1000} >
+        <Fade left duration={palette.DURATION} delay={isDesktop ? 0 : palette.DELAY+1000} >
           <Wrapper>
             <Line />
             <LeftItem target="_blank" href="#"><AiFillGithub fill={palette.GOLD_COLOR} size={SOCIAL_ICON_SIZE} /></LeftItem>
@@ -71,14 +102,14 @@ const NavbarBot = () => {
         </Fade>
       </Left>
       <Right>
-        <Fade right duration={palette.DURATION} delay={palette.DELAY+1000} >
+        <Fade right duration={palette.DURATION} delay={isDesktop ? 0 : palette.DELAY+1000} >
           <Wrapper>
             <Text title="gontatudor@gmail.com" href="#contact">gontatudor@gmail.com</Text>
             <Line />
           </Wrapper>
         </Fade>
       </Right>
-    </>
+    </FlexContainer>
   )
 }
 
