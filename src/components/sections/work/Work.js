@@ -157,8 +157,8 @@ const Work = () => {
                     front-end design. Deployed on Vercel.
               </Desc>
               <Social>
-                <AiFillGithub fill={palette.GOLD_COLOR} size={28} style={{marginRight: "1em"}} className="social"/>
-                <BiLinkExternal fill={palette.GOLD_COLOR} size={28} className="social"/>
+                <a target="_blank" rel="noreferrer" href="https://github.com/tudorgonta/EV"><AiFillGithub fill={palette.GOLD_COLOR} size={28} style={{marginRight: "1em"}} className="social"/></a>
+                <a target="_blank" rel="noreferrer" href="https://ev-two.vercel.app/"><BiLinkExternal fill={palette.GOLD_COLOR} size={28} className="social"/></a>
               </Social>
             </Left>
             
@@ -185,8 +185,8 @@ const Work = () => {
               <Desc>A web app for a photo	&amp; video company. Built with Next Js, Tailwind CSS and Sanity.io as a CMS. Custom Sanity dashboard with editable components. Deployed on Vercel.
               </Desc>
               <Social>
-                <AiFillGithub fill={palette.GOLD_COLOR} size={28} style={{marginRight: "1em"}} className="social"/>
-                <BiLinkExternal fill={palette.GOLD_COLOR} size={28} className="social"/>
+                <a target="_blank" rel="noreferrer" href="https://github.com/tudorgonta/PublicRepublic"><AiFillGithub fill={palette.GOLD_COLOR} size={28} style={{marginRight: "1em"}} className="social"/></a>
+                <a target="_blank" rel="noreferrer" href="https://www.publicrepublic.art/"><BiLinkExternal fill={palette.GOLD_COLOR} size={28} className="social"/></a>
               </Social>
             </Left2>
           </BodyWrapper>

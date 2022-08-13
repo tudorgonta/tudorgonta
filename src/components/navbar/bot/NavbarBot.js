@@ -96,8 +96,8 @@ const NavbarBot = () => {
         <Fade left duration={palette.DURATION} delay={isDesktop ? 0 : palette.DELAY+1000} >
           <Wrapper>
             <Line />
-            <LeftItem target="_blank" href="#"><AiFillGithub fill={palette.GOLD_COLOR} size={SOCIAL_ICON_SIZE} /></LeftItem>
-            <LeftItem target="_blank" href="#"><AiFillLinkedin fill={palette.GOLD_COLOR} size={SOCIAL_ICON_SIZE} /></LeftItem>
+            <LeftItem target="_blank" href="https://github.com/tudorgonta"><AiFillGithub fill={palette.GOLD_COLOR} size={SOCIAL_ICON_SIZE} /></LeftItem>
+            <LeftItem target="_blank" href="https://www.linkedin.com/in/tudorgonta/"><AiFillLinkedin fill={palette.GOLD_COLOR} size={SOCIAL_ICON_SIZE} /></LeftItem>
           </Wrapper>
         </Fade>
       </Left>
