@@ -4,6 +4,6 @@
     <li><strike>Edit Scrollbar</strike></li>
     <li><strike>Scroll animation</strike></li>
     <li><strike>Components scroll animation</strike></li>
-    <li>Resposinve+Favico</li>
-    <li>Links Edit + image hover background</li>
+    <li><strike>Resposinve</strike>+Favico</li>
+    <li>Links Edit + fix font production</li>
 </ol>
