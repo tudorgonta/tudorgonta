@@ -1,21 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
-import IE9 from './fonts/e50f08c648d677fc2b0f52ac98afb797.eot'
-import IE6 from './fonts/e50f08c648d677fc2b0f52ac98afb797.eot?#iefix'
-import Chrome from './fonts/e50f08c648d677fc2b0f52ac98afb797.woff2'
-import Firefox from './fonts/e50f08c648d677fc2b0f52ac98afb797.woff'
-import Safari from './fonts/e50f08c648d677fc2b0f52ac98afb797.ttf'
-import Ios from './fonts/e50f08c648d677fc2b0f52ac98afb797.svg'
 
 const GlobalStyle = createGlobalStyle`
-  @font-face {font-family: "Ayuthaya";
-    src: url(${IE9}); /* IE9*/
-    src: url(${IE6}) format("embedded-opentype"), /* IE6-IE8 */
-    url(${Chrome}) format("woff2"), /* chrome、firefox */
-    url(${Firefox}) format("woff"), /* chrome、firefox */
-    url(${Safari}) format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url(${Ios}) format("svg"); /* iOS 4.1- */
-  }
   * {
     margin: 0;
     padding: 0;

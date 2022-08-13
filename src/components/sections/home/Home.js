@@ -20,6 +20,7 @@ const Head = styled.div`
  font-size: 4.65em;
 `
 const First = styled.div`
+font-family: Ayuthaya;
 
 `
 const Last = styled.div`
