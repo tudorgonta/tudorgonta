@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     background: transparent;
     color: #F9E5C9;
-    font-family: Ayuthaya;
+    font-family: 'Ayuthaya',sans-serif;
   }
   ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.05);
