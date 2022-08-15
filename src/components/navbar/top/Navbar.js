@@ -4,6 +4,7 @@ import * as palette from '../../../styleVariables';
 import Fade from 'react-reveal/Fade';
 import { useState } from "react";
 import Hamburger from "./Hamburger";
+import Pdf from './Resume.pdf';
 
 
 const Nav = styled.nav`
@@ -110,7 +111,7 @@ const Navbar = () => {
           <Item><Link onClick={closeHamburger} href="#about" title="About">About</Link></Item>
           <Item><Link onClick={closeHamburger} href="#work" title="Work">Work</Link></Item>
           <Item><Link onClick={closeHamburger} href="#contact" title="Contact">Contact</Link></Item>
-          <Button title="Resume">Resume</Button>
+          <Button target="_blank" href={Pdf} title="Resume">Resume</Button>
         </List>
         </Fade>
       </Nav>

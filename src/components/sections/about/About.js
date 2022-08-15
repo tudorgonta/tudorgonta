@@ -216,7 +216,7 @@ const About = () => {
             <IconWrapper>
                 <AiFillGithub fill={palette.GOLD_COLOR} size={size} className="skillIcon" />
                 <br></br>
-                <span>Github</span>
+                <span>Git</span>
             </IconWrapper>
             <IconWrapper>
                 <SiAdobexd fill={palette.GOLD_COLOR} size={size} className="skillIcon" />
