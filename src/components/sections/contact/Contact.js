@@ -80,7 +80,9 @@ const Form = styled.form`
   margin: 0 auto;
   @media ${palette.device.tablet} { 
     width: 100%;
-    margin-left: 3.5%;
+    margin-left: 3.3%;
+  }
+  @media ${palette.device.laptop} {
   }
 `
 const InputName = styled.input`
