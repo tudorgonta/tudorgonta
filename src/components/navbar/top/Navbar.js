@@ -111,7 +111,7 @@ const Navbar = () => {
           <Item><Link onClick={closeHamburger} href="#about" title="About">About</Link></Item>
           <Item><Link onClick={closeHamburger} href="#work" title="Work">Work</Link></Item>
           <Item><Link onClick={closeHamburger} href="#contact" title="Contact">Contact</Link></Item>
-          <Button target="_blank" href={Pdf} title="Resume">Resume</Button>
+          <Button title="Resume">Resume</Button>
         </List>
         </Fade>
       </Nav>
